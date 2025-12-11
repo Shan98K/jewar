@@ -1,3 +1,6 @@
+section p {
+    letter-spacing: 2px;
+}
 .home {
     width: 100vw;
     font-family: "Poppins";
@@ -11,9 +14,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(wheat , white);
 }
-.intro-imgHolder img { width: 98vw; }
+.intro-imgHolder img { width: 100vw; }
 .intro-text {
     padding-block: 50px;
     padding-inline: 55px;
@@ -22,6 +24,7 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    background: #F6F4EF;
 }
 .intro-text span {
     background: linear-gradient(145deg, rgb(105, 105, 105), #121214);
@@ -29,13 +32,15 @@
     -webkit-background-clip: text;
 }
 .hosted {
-    background: #0A171D;
+    min-height: 100dvh;
+    padding-block-start: 35px;
+    padding-block-end: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    min-height: 100dvh;
+    background: #0A171D;
 }
 .hosted .hosted-text {
     color: #fff;
@@ -51,14 +56,16 @@
 .hosted .hosted-text p {
     width: 75%;
     min-width: 200px;
+    font-style: oblique;
 }
 .hosted-examples {
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-inline: 40px;
     flex-wrap: wrap;
+    row-gap: 25px;
 }
 .hosted-examples .hostedEx {
     position: relative;
@@ -99,6 +106,7 @@
     justify-content: center;
     text-align: center;
     padding-bottom: 450px;
+    background: #cb7560;
     position: relative;
     overflow: hidden;
 }
@@ -172,4 +180,27 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+    .hosted .hosted-text p { width: 100%; }
+    .intro-text { padding-inline: 25px; }
+    .bottom-img { background-image: url("./assets/jewarFront\ \(2).avif"); background-position: 41% 50%; }
+    .hosted-examples .hostedEx { border-radius: 35px; border: 5px double white; }
+    .hosted-examples .hostedEx:hover { border-radius: 0px; border: 5px double transparent; }
+    .hosted-examples .hostedEx .overlay { opacity: 1; }
+    .hosted-examples .hostedEx:hover .overlay { opacity: 0; }
+    .experties p { padding-inline: 20px; }
 }

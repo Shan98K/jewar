@@ -18,11 +18,12 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: wheat;
+    background: #F6F4EF;
     padding-block: 20px;
     padding-block-end: 30px;
     padding-inline: 50px;
     gap: 10px;
+    z-index: 100;
 }
 .logo {
     font-size: 2rem;
@@ -31,6 +32,7 @@ header {
     justify-content: center;
     text-align: center;
     cursor: default;
+    color: #c16543;
 }
 .logo img { width: 60px; }
 header .logo { transform: scale(1.5) translateX(-13%); transform-origin: center center; }
@@ -64,6 +66,7 @@ header .bottomHeader {
     gap: 20px;
 }
 .mainUl ul a {
+    color: #c16543;
     text-decoration: none;
     padding-inline: 5px;
     border: 2px solid transparent;
@@ -79,6 +82,7 @@ header .bottomHeader {
 .mainUl ul a li {
     list-style: none;
     width: max-content;
+    color: #c16543;
 }
 header .bottomHeader .touch {
     font-family: "Poppins";
@@ -115,117 +119,30 @@ header .bottomHeader .touch:hover h3 {
 
 
 
-
-
-
-
-
-
-
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-inline: 50px;
-    padding-block-start: 35px;
-    padding-block-end: 25px;
-    padding-block-end: 30px;
-    background: #0B1B23;
-    gap: 30px;
-}
-footer .upperFoot {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-footer .letUs ,footer .mainFoot , .map {
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-footer .letUs {
-    color: #fff;
-    flex-direction: column;
-    gap: 20px;
-}
-footer .letUs input {
-    padding: 5px;
-    border-radius: 5px;
-}
-footer .letUs button {
-    color: #fff;
-    font-weight: 900;
-    padding-block: 10px;
-    padding-inline: 20px;
-    border-radius: 15px;
-    background: linear-gradient(90deg, rgba(0, 255, 255, 0.5), transparent);
-    background-size: 300%;
-    background-position: right;
-    cursor: pointer;
-    transition: 0.5s;
-}
-footer .letUs button:hover { background-position: left; }
-footer .letUs button:active { box-shadow: 0 0 5px inset black; transition: 0s; }
-footer .letUs p { font-family: "Poppins"; }
-footer .letUs h4 { font-weight: 300; color: rgb(159, 159, 159); font-family: "Poppins"; }
-footer .letUs h4 , h3 { letter-spacing: 1px; }
-footer .logo { filter: invert(); }
-footer .share div a{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background: white;
-}
-footer .share div a {
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-footer .share div a img { width: 25px; }
-footer .share div:last-child a img { width: 38px; }
-footer .mainFoot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-    max-width: 200px;
-}
-footer .mainFoot .mail{ font-style: italic; letter-spacing: 2px; text-decoration: underline rgb(255, 0, 230); }
-footer .mainFoot .phone{ letter-spacing: 1px; }
-footer .map {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 200px;
-}
-footer .map img {
-    width: 200px;
-    transform: scale(2);
-    transform-origin: right center;
-    object-fit: cover;
-}
-footer .mainUl {
+.mainHEADER {
+    position: fixed;
+    left: 0;
+    top: 0;
     width: 100vw;
-    font-family: "Poppins";
+    padding-block: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #c16543;
+    background: #F6F4EF;
+    z-index: 10;
 }
-footer .mainUl ul a {
-    padding-block: 5px;
-    padding-inline: 10px;
-    transition: 0.3s;
+.mainHEADER h2 {
+    font-weight: 500;
 }
-footer .mainUl ul a:hover {
-    color: #fff;
-    background: black;
-    border-radius: 30%;
+.mainHEADER img {
+    width: 50px;
 }
+
+
+
+
 
 
 
@@ -276,6 +193,150 @@ footer .fb .popup::after {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline: 50px;
+    padding-block-start: 35px;
+    padding-block-end: 25px;
+    padding-block-end: 30px;
+    background: #0B1B23;
+    gap: 30px;
+    color: #F6F4EF;
+}
+footer .upperFoot {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    row-gap: 40px;
+    flex-wrap: wrap;
+}
+footer .letUs ,footer .mainFoot , .map {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+footer .letUs {
+    color: #fff;
+    flex-direction: column;
+    gap: 20px;
+}
+footer .letUs input {
+    padding: 5px;
+    border-radius: 5px;
+}
+footer .letUs button {
+    color: #fff;
+    font-weight: 900;
+    padding-block: 10px;
+    padding-inline: 20px;
+    border-radius: 15px;
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.5), transparent);
+    background-size: 300%;
+    background-position: right;
+    cursor: pointer;
+    transition: 0.5s;
+}
+footer .letUs button:hover { background-position: left; }
+footer .letUs button:active { box-shadow: 0 0 5px inset black; transition: 0s; }
+footer .letUs p { font-family: "Poppins"; }
+footer .letUs h4 { font-weight: 300; color: rgb(159, 159, 159); font-family: "Poppins"; }
+footer .letUs h4 , h3 { letter-spacing: 1px; }
+footer .logo { color: white; }
+footer .share div a{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: white;
+}
+footer .share div a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .share div a img { width: 25px; }
+footer .share div:last-child a img { width: 38px; }
+footer .mainFoot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    max-width: 200px;
+}
+footer .mainFoot .mail{ font-style: italic; letter-spacing: 5px; text-decoration: underline rgb(133, 133, 133); }
+footer .mainFoot .phone{ letter-spacing: 1px; }
+footer .map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 200px;
+}
+footer .map img {
+    width: 200px;
+    transform: scale(2);
+    transform-origin: right center;
+    object-fit: cover;
+}
+footer .mainUl {
+    width: 100vw;
+    font-family: "Poppins";
+}
+footer .mainUl ul a {
+    padding-block: 5px;
+    padding-inline: 10px;
+    transition: 0.3s;
+}footer .mainUl ul a li {
+    color: #F6F4EF;
+}
+footer .mainUl ul a:hover {
+    color: #fff;
+    background: black;
+    border-radius: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1000px) {
     footer .map img { transform: scale(1.35); }
 }
@@ -311,27 +372,18 @@ footer .fb .popup::after {
         font-size: 0.6rem;
         gap: 2px;
     }
-    header .mainUl ul li {
-        color: #000;
-    }
     footer {
         width: 100vw; 
-        padding-top: 200px;
-        padding-inline: 0px;
-        position: relative;
         display: flex;
     }
-    footer .upperFoot .letUs { transform: scale(0.75); transform-origin: center; }
-    footer .upperFoot .map { transform: scale(0.75); transform-origin: center; }
+    footer .upperFoot { display: flex; }
+    footer .letUs ,footer .mainFoot , .map { width: 80vw; }
+    footer .upperFoot .letUs { gap: 10px; }
     footer .upperFoot .mainFoot {
-        position: absolute;
         width: 100vw;
-        top: 20px;
-        left: 50%;
-        transform: scale(1) translateX(-50%);
-        transform-origin: center;
         gap: 10px;
     }
+    footer .upperFoot .mainFoot .phone { letter-spacing: 1.5px; }
     footer .upperFoot .mainFoot .logo { padding-block: 10px; width: 100vw; }
     footer .map img { transform: scale(1.25); }
     footer .bottomFooter { padding-block: 10px; }
@@ -343,6 +395,19 @@ footer .fb .popup::after {
     }
     a { color: white; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes headDown {
     0% { transform: translateY(-100%); opacity: 0; }
