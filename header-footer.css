@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  -webkit-tap-highlight-color: transparent;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+a{ text-decoration: none; }
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: wheat;
+    padding-block: 20px;
+    padding-block-end: 30px;
+    padding-inline: 50px;
+    gap: 10px;
+}
+.logo {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: default;
+}
+.logo img { width: 60px; }
+header .logo { transform: scale(1.5) translateX(-13%); transform-origin: center center; }
+header .bottomHeader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.share img { width: 35px; }
+.share div:last-child a img { width: 54px; }
+.share div:hover { filter: invert(); }
+.mainUl {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mainUl ul {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.mainUl ul a {
+    text-decoration: none;
+    padding-inline: 5px;
+    border: 2px solid transparent;
+}
+.mainUl ul a:hover {
+    color: #fff;
+    border-block: 2px solid rgb(114, 114, 114);
+}
+.mainUl ul a:active {
+    color: grey;
+    border-radius: 10px;
+}
+.mainUl ul a li {
+    list-style: none;
+    width: max-content;
+}
+header .bottomHeader .touch {
+    font-family: "Poppins";
+    text-align: center;
+    letter-spacing: 1px;
+    padding-block: 8px;
+    padding-inline: 15px;
+    border-radius: 12px;
+    border: 5px double black;
+    cursor: pointer;
+    transition: 0.3s;
+    overflow: hidden;
+}
+header .bottomHeader .touch:hover {
+    border: 5px solid white;
+    text-shadow: 0 0 2px white;
+    box-shadow: 0 0 5px black, 0 0 5px black inset;
+}
+header .bottomHeader .touch:hover h3 {
+    animation: shakeLR 0.2s ease-in-out;
+}
+@keyframes shakeLR {
+    0% { transform: translateX(-50%) translateY(-50%); }
+    33% { transform: translateX(50%) translateY(100%); color: white; }
+    66% { transform: translateX(-100%) translateY(-50%); color: white; }
+    100% { transform: translateX(50%) translateY(50%); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline: 50px;
+    padding-block-start: 35px;
+    padding-block-end: 25px;
+    padding-block-end: 30px;
+    background: #0B1B23;
+    gap: 30px;
+}
+footer .upperFoot {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+footer .letUs ,footer .mainFoot , .map {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+footer .letUs {
+    color: #fff;
+    flex-direction: column;
+    gap: 20px;
+}
+footer .letUs input {
+    padding: 5px;
+    border-radius: 5px;
+}
+footer .letUs button {
+    color: #fff;
+    font-weight: 900;
+    padding-block: 10px;
+    padding-inline: 20px;
+    border-radius: 15px;
+    background: linear-gradient(90deg, rgba(0, 255, 255, 0.5), transparent);
+    background-size: 300%;
+    background-position: right;
+    cursor: pointer;
+    transition: 0.5s;
+}
+footer .letUs button:hover { background-position: left; }
+footer .letUs button:active { box-shadow: 0 0 5px inset black; transition: 0s; }
+footer .letUs p { font-family: "Poppins"; }
+footer .letUs h4 { font-weight: 300; color: rgb(159, 159, 159); font-family: "Poppins"; }
+footer .letUs h4 , h3 { letter-spacing: 1px; }
+footer .logo { filter: invert(); }
+footer .share div a{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: white;
+}
+footer .share div a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .share div a img { width: 25px; }
+footer .share div:last-child a img { width: 38px; }
+footer .mainFoot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    max-width: 200px;
+}
+footer .mainFoot .mail{ font-style: italic; letter-spacing: 2px; text-decoration: underline rgb(255, 0, 230); }
+footer .mainFoot .phone{ letter-spacing: 1px; }
+footer .map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 200px;
+}
+footer .map img {
+    width: 200px;
+    transform: scale(2);
+    transform-origin: right center;
+    object-fit: cover;
+}
+footer .mainUl {
+    width: 100vw;
+    font-family: "Poppins";
+}
+footer .mainUl ul a {
+    padding-block: 5px;
+    padding-inline: 10px;
+    transition: 0.3s;
+}
+footer .mainUl ul a:hover {
+    color: #fff;
+    background: black;
+    border-radius: 30%;
+}
+
+
+
+
+
+
+
+
+.fb {
+    position: relative;
+}
+.popup {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 13px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    z-index: 999;
+}
+.popup::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #222 transparent transparent transparent;
+}
+.popup.show {
+    opacity: 1;
+}
+footer .fb .popup {
+    bottom: 150%;
+    font-size: 12px;
+    padding: 5px 8px;
+}
+footer .fb .popup::after {
+    border-width: 5px;
+}
+
+
+@media (max-width: 1000px) {
+    footer .map img { transform: scale(1.35); }
+}
+
+@media (max-width: 480px) {
+    header { padding-inline: 0px; position: relative; }
+    header .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: scale(1);
+        gap: 5px;
+    }
+    header .logo img { transform: scale(1.25); }
+    header .bottomHeader {
+        padding: 0;
+        padding-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    header .bottomHeader .share { justify-content: space-between; }
+    header .mainUl {
+        position: absolute;
+        width: 100vw;
+        bottom: 20px;
+    }
+    header .mainUl ul {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.6rem;
+        gap: 2px;
+    }
+    header .mainUl ul li {
+        color: #000;
+    }
+    footer {
+        width: 100vw; 
+        padding-top: 200px;
+        padding-inline: 0px;
+        position: relative;
+        display: flex;
+    }
+    footer .upperFoot .letUs { transform: scale(0.75); transform-origin: center; }
+    footer .upperFoot .map { transform: scale(0.75); transform-origin: center; }
+    footer .upperFoot .mainFoot {
+        position: absolute;
+        width: 100vw;
+        top: 20px;
+        left: 50%;
+        transform: scale(1) translateX(-50%);
+        transform-origin: center;
+        gap: 10px;
+    }
+    footer .upperFoot .mainFoot .logo { padding-block: 10px; width: 100vw; }
+    footer .map img { transform: scale(1.25); }
+    footer .bottomFooter { padding-block: 10px; }
+    footer .bottomFooter .mainUl ul {
+        display: flex;
+        font-size: 1rem;
+        gap: 5px;
+        padding-block-start: 10px;
+    }
+    a { color: white; }
+}
+
+@keyframes headDown {
+    0% { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+header {
+    transform: translateY(-100%);
+    animation: headDown 0.35s ease-out forwards;
+}
+
+@keyframes logoPop {
+    0% { transform: translateY(-20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+header .logo {
+    opacity: 0;
+    animation: logoPop 0.4s ease-out 0.25s forwards;
+}
+
+@keyframes navFadeUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+header .mainUl ul a {
+    opacity: 0;
+    animation: navFadeUp 0.45s ease-out 0.35s forwards;
+}
+
+@keyframes touchUp {
+    0% { transform: translateY(25px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+header .touch {
+    opacity: 0;
+    animation: touchUp 0.45s ease-out 0.45s forwards;
+}
+
+@keyframes footUp {
+    0% { transform: translateY(100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+footer {
+    transform: translateY(100%);
+    animation: footUp 0.4s ease-out forwards;
+}

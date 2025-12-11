@@ -1,0 +1,175 @@
+.home {
+    width: 100vw;
+    font-family: "Poppins";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.intro-imgHolder {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(wheat , white);
+}
+.intro-imgHolder img { width: 98vw; }
+.intro-text {
+    padding-block: 50px;
+    padding-inline: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.intro-text span {
+    background: linear-gradient(145deg, rgb(105, 105, 105), #121214);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.hosted {
+    background: #0A171D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100dvh;
+}
+.hosted .hosted-text {
+    color: #fff;
+    padding-block-end: 50px;
+    padding-inline: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+.hosted .hosted-text p {
+    width: 75%;
+    min-width: 200px;
+}
+.hosted-examples {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 40px;
+    flex-wrap: wrap;
+}
+.hosted-examples .hostedEx {
+    position: relative;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.3s;
+    border: 5px double transparent;
+}
+.hosted-examples .hostedEx:hover { border-radius: 35px; border: 5px double white; }
+.hosted-examples .hostedEx img {
+    width: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+.hosted-examples .hostedEx:hover .overlay { opacity: 1; }
+.overlay {
+    opacity: 0;
+    position: absolute;
+    color: #fff;
+    font-size: 1.75rem;
+    font-weight: 900;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(105, 105, 105, 0.25);
+    backdrop-filter: blur(3px);
+}
+.experties {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 450px;
+    position: relative;
+    overflow: hidden;
+}
+.experties h1 { padding-block-start: 50px; }
+.experties p { padding-inline: 75px; padding-block: 20px; padding-block-end: 50px; }
+.experties .experties-show {
+    position: absolute;
+    bottom: 0px;
+    left: 75px;
+    height: 400px;
+    padding-block-end: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    animation: slide 30s linear infinite;
+}
+@keyframes slide {
+    0% { left: 75px; }
+    50% { left: -190%; }
+    100% { left: 0; }
+}
+.experties .experties-show .show{
+    height: 400px;
+    background: grey;
+    position: relative;
+}
+.experties .experties-show .show img {
+    height: 400px;
+    object-position: center;
+}
+.experties .experties-show .show .showHidden{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg , rgba(120, 120, 120, 0.5), rgba(0,0,0,0.5));
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: 0.3s;
+}
+.experties .experties-show .show .showHidden h3 {
+    color: white;
+    border-radius: 50px;
+    padding-inline: 20px;
+    padding-block-start: 5px;
+    border-top: 5px double white;
+    text-shadow: 0 0 3px black;
+    letter-spacing: 2px;
+}
+.experties .experties-show .show .showHidden p {
+    color: white;
+    border-radius: 50px;
+    padding-inline: 20px;
+    padding-block-end: 15px;
+    border-bottom: 5px double white;
+    text-shadow: 0 0 3px black;
+    letter-spacing: 1px;
+}
+.experties .experties-show .show .showHidden:hover { opacity: 1; } 
+.bottom-img {
+    width: 100vw;
+    height: 85dvh;
+    background-image: url("./assets/jewarWide (2).avif");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

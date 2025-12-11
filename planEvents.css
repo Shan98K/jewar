@@ -1,0 +1,188 @@
+section{
+    font-family: "Poppins";
+}
+.mainImgHolder{
+    width: 100vw;
+    height: max-content;
+    position: relative;
+}
+.mainImgHolder img:first-child {
+    width: 100vw;
+    object-fit: cover;
+}
+.mainImgHolder img:last-child {
+    position: absolute;
+    top: 80%;
+    right: 50px;
+    width: 400px;
+    height: 500px;
+    border-radius: 25px;
+    object-fit: cover;
+    box-shadow: -5px 5px 5px black;
+}
+.eventAbout {
+    width: 55vw;
+    padding-block-start: 20px;
+    padding-block-end: 50px;
+    padding-inline: 40px;
+    text-align: center;
+}
+.eventAbout .mainText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, grey, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 5px;
+}
+.eventAbout .eventOptions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.eventAbout .eventOptions h3 {
+    font-size: 15px;
+    font-weight: 400;
+}
+.eventAbout .about {
+    color: rgb(80, 80, 80);
+    padding-block-start: 20px;
+    font-weight: 500;
+}
+.passIMG {
+    width: 100vw;
+    height: 80dvh;
+    background-image: url('./assets/jewarFront (3).avif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.passIMG img {
+    width: 100vw;
+    object-fit: cover;
+    background-attachment: fixed;
+}
+.resortInfo { background: #121214; color: white; padding-inline: 50px; padding-block-start: 40px; }
+p span { font-weight: 800; }
+.resortInfo .resortAbout { padding-block-end: 30px; }
+.resortInfo .resortAbout p:last-child { padding-inline: 10px; text-align: center; }
+.resortInfo .resortOverview p span { letter-spacing: 2px; }
+.resortInfo .resortOverview p span span { text-decoration: underline; }
+.resortInfo .resortOverview {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.resortInfo .resortMotto {
+    padding-inline: 40px;
+    padding-block: 40px;
+    font-style: italic;
+}
+.resortInfo .resortMotto h3 { font-weight: 100; }
+.resortInfo .resortMotto p {
+    width: max-content;
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+.resortInfo .resortMotto p span { letter-spacing: -3px; }
+.imgScrollHolder {
+    width: 100vw;
+    height: 500px;
+    padding-inline: 100px;
+    background: linear-gradient(0deg, white, #121214);
+    position: relative;
+}
+.imgScrollHolder .imgSlider {
+    width: calc(100vw - 200px);
+    height: 100%;
+    overflow-x: scroll;
+    display: flex;
+    gap: 35px;
+}
+.imgScrollHolder .imgSlider .imgSlidingBarHolder {
+    width: 80%;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+}
+.imgScrollHolder .imgSlider .imgSlidingBarHolder img { width: 25px; }
+.imgScrollHolder .imgSlider .imgSlidingBarHolder .imgSlidingBar{
+    width: 100%;
+    border-radius: 50%;
+    height: 5px;
+    background: #222234;
+    z-index: 1;
+}
+.imgScrollHolder .imgSlider img { border-radius: 25px; }
+.getTouch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 75px;
+}
+.getTouch a h3 {
+    color: black;
+    border: 3px solid black;
+    padding-block: 20px;
+    padding-inline: 40px;
+    position: relative;
+    overflow: hidden;
+}
+.getTouch a h3::after {
+    color: transparent;
+    padding-block: 20px;
+    padding-inline: 40px;
+    content: "GET IN TOUCH";
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    opacity: 0;
+    transform: scale(1.15);
+    transform-origin: center;
+    background: linear-gradient(135deg, #35352d 55%, #121214 50%);
+    filter: blur(17px);
+    padding-block: 20px;
+    padding-inline: 40px;
+    transition: 0.3s;
+    z-index: -1;
+}
+.getTouch a h3:hover::after {
+    opacity: 1;
+}
+.getTouch a h3:hover {
+    color: white;
+    overflow: visible;
+    border-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+    .mainImgHolder img:last-child { display: none; }
+    .eventAbout { width: 100vw; font-size: 0.6rem;}
+}
+@media (max-width: 480px) {
+    .resortInfo { font-size: 0.6rem; padding-inline: 20px; }
+    .resortInfo .resortMotto { padding-inline: 20px; }
+    .passIMG { background-position: 45.5% 50%; }
+    .imgScrollHolder { height: 280px; padding-inline: 20px; }
+    .imgScrollHolder .imgSlider { width: calc(100vw - 40px); }
+}
