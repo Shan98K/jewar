@@ -53,7 +53,7 @@ section{
 }
 .passIMG {
     width: 100vw;
-    height: 80dvh;
+    height: 80vh;
     background-image: url('./assets/jewarFront (3).avif');
     background-size: cover;
     background-position: center;

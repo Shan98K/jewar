@@ -1,18 +1,36 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scrollbar-width: none;
-  -webkit-tap-highlight-color: transparent;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Poppins', sans-serif;
 }
+
 *::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
-body{
+
+*::selection {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: pink;
+}
+
+/* For Firefox support (older versions) */
+::-moz-selection {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: pink;
+}
+
+body {
     width: 100vw;
     overflow-x: hidden;
 }
-a{ text-decoration: none; }
+
+a {
+    text-decoration: none;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -25,6 +43,7 @@ header {
     gap: 10px;
     z-index: 100;
 }
+
 .logo {
     font-size: 2rem;
     display: flex;
@@ -34,29 +53,54 @@ header {
     cursor: default;
     color: #c16543;
 }
-.logo img { width: 60px; }
-header .logo { transform: scale(1.5) translateX(-13%); transform-origin: center center; }
+
+.logo img {
+    width: 60px;
+}
+
+header .logo {
+    transform: scale(1.5) translateX(-13%);
+    transform-origin: center center;
+}
+
 header .bottomHeader {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .share {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
 }
-.share img { width: 35px; }
-.share div:last-child a img { width: 54px; }
-.share div:hover { filter: invert(); }
+
+.share img {
+    width: 35px;
+}
+
+.share div {
+    transition: 0.15s;
+}
+
+.share div:last-child a img {
+    width: 54px;
+}
+
+.share div:hover {
+    filter: invert() drop-shadow(2px 2px 2px black);
+    scale: 1.1;
+}
+
 .mainUl {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .mainUl ul {
     width: 80%;
     display: flex;
@@ -65,59 +109,68 @@ header .bottomHeader {
     flex-wrap: wrap;
     gap: 20px;
 }
+
 .mainUl ul a {
     color: #c16543;
     text-decoration: none;
     padding-inline: 5px;
     border: 2px solid transparent;
 }
+
 .mainUl ul a:hover {
     color: #fff;
     border-block: 2px solid rgb(114, 114, 114);
 }
+
 .mainUl ul a:active {
     color: grey;
     border-radius: 10px;
 }
+
 .mainUl ul a li {
     list-style: none;
     width: max-content;
     color: #c16543;
 }
-header .bottomHeader .touch {
-    font-family: "Poppins";
-    text-align: center;
-    letter-spacing: 1px;
-    padding-block: 8px;
-    padding-inline: 15px;
-    border-radius: 12px;
-    border: 5px double black;
+
+.touch {
+    font-family: "Poppins", sans-serif;
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 28px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #000;
+    background-color: #fff;
+    border: 3px solid #000;
+
+    /* The "Stylish" Offset Shadow */
+    box-shadow: 6px 6px 0px #000;
+    transition: all 0.2s ease;
     cursor: pointer;
-    transition: 0.3s;
-    overflow: hidden;
-}
-header .bottomHeader .touch:hover {
-    border: 5px solid white;
-    text-shadow: 0 0 2px white;
-    box-shadow: 0 0 5px black, 0 0 5px black inset;
-}
-header .bottomHeader .touch:hover h3 {
-    animation: shakeLR 0.2s ease-in-out;
-}
-@keyframes shakeLR {
-    0% { transform: translateX(-50%) translateY(-50%); }
-    33% { transform: translateX(50%) translateY(100%); color: white; }
-    66% { transform: translateX(-100%) translateY(-50%); color: white; }
-    100% { transform: translateX(50%) translateY(50%); }
 }
 
+.touch:hover {
+    /* "Press" effect */
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px #000;
+    background-color: #000;
+    color: #fff;
+}
 
+.touch span {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
 
+.touch:hover span {
+    transform: scale(1.1);
+}
 
-
-
-
-
+.touch a {
+    color: inherit;
+}
 
 .mainHEADER {
     position: fixed;
@@ -133,77 +186,18 @@ header .bottomHeader .touch:hover h3 {
     background: #F6F4EF;
     z-index: 10;
 }
+
 .mainHEADER h2 {
     font-weight: 500;
 }
+
 .mainHEADER img {
     width: 50px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 .fb {
     position: relative;
 }
-.popup {
-    position: absolute;
-    bottom: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #222;
-    color: #fff;
-    padding: 6px 10px;
-    font-size: 13px;
-    border-radius: 6px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.15s ease;
-    z-index: 999;
-}
-.popup::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 6px;
-    border-style: solid;
-    border-color: #222 transparent transparent transparent;
-}
-.popup.show {
-    opacity: 1;
-}
-footer .fb .popup {
-    bottom: 150%;
-    font-size: 12px;
-    padding: 5px 8px;
-}
-footer .fb .popup::after {
-    border-width: 5px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 footer {
     display: flex;
@@ -215,134 +209,99 @@ footer {
     padding-block-end: 25px;
     padding-block-end: 30px;
     background: #0B1B23;
-    gap: 30px;
     color: #F6F4EF;
 }
-footer .upperFoot {
-    width: 100%;
+
+.footText {
+    position: relative;
+    width: max-content;
+    height: 180px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    row-gap: 40px;
-    flex-wrap: wrap;
+    justify-content: center;
+    cursor: default;
+    overflow: hidden;
 }
-footer .letUs ,footer .mainFoot , .map {
-    width: 200px;
+
+.footText .footJewar {
+    font-size: clamp(6.5rem, 30vw, 13rem);
+    font-weight: bold;
+    font-family: Poppins;
+    background: linear-gradient(135deg, #0B1B23, grey);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    position: relative;
+}
+
+.footText .footSpan {
+    position: absolute;
+    top: 13.5px;
+    right: 0;
+    font-size: clamp(1rem, 10vw, 1.61rem);
+    background: linear-gradient(135deg, grey, white);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.map {
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-block: 50px;
+    padding-inline: 50px;
 }
-footer .letUs {
-    color: #fff;
-    flex-direction: column;
-    gap: 20px;
+
+.map {
+    overflow: hidden;
+    clip-path: inset(100% 0 0 0);
+    transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 }
-footer .letUs input {
-    padding: 5px;
-    border-radius: 5px;
+
+.map.active {
+    clip-path: inset(0 0 0 0);
 }
-footer .letUs button {
-    color: #fff;
-    font-weight: 900;
-    padding-block: 10px;
-    padding-inline: 20px;
-    border-radius: 15px;
-    background: linear-gradient(90deg, rgba(0, 255, 255, 0.5), transparent);
-    background-size: 300%;
-    background-position: right;
-    cursor: pointer;
-    transition: 0.5s;
-}
-footer .letUs button:hover { background-position: left; }
-footer .letUs button:active { box-shadow: 0 0 5px inset black; transition: 0s; }
-footer .letUs p { font-family: "Poppins"; }
-footer .letUs h4 { font-weight: 300; color: rgb(159, 159, 159); font-family: "Poppins"; }
-footer .letUs h4 , h3 { letter-spacing: 1px; }
-footer .logo { color: white; }
-footer .share div a{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background: white;
-}
-footer .share div a {
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-footer .share div a img { width: 25px; }
-footer .share div:last-child a img { width: 38px; }
-footer .mainFoot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-    max-width: 200px;
-}
-footer .mainFoot .mail{ font-style: italic; letter-spacing: 5px; text-decoration: underline rgb(133, 133, 133); }
-footer .mainFoot .phone{ letter-spacing: 1px; }
-footer .map {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 200px;
-}
+
 footer .map img {
-    width: 200px;
-    transform: scale(2);
-    transform-origin: right center;
-    object-fit: cover;
+    width: 75%;
 }
-footer .mainUl {
-    width: 100vw;
-    font-family: "Poppins";
-}
-footer .mainUl ul a {
-    padding-block: 5px;
-    padding-inline: 10px;
+
+footer .mapButton {
+    rotate: 180deg;
+    scale: 1.5;
+    background: transparent;
+    border: none;
+    animation: lift 1s ease-in-out infinite;
     transition: 0.3s;
-}footer .mainUl ul a li {
-    color: #F6F4EF;
-}
-footer .mainUl ul a:hover {
-    color: #fff;
-    background: black;
-    border-radius: 30%;
+    cursor: pointer;
 }
 
+.mapButton.active {
+    transform: rotate(180deg);
+    animation: none;
+}
 
+@keyframes lift {
+    0% {}
 
+    25% {
+        transform: translateY(10px);
+    }
 
+    75% {
+        transform: translateY(10px);
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 1000px) {
-    footer .map img { transform: scale(1.35); }
+    100% {}
 }
 
 @media (max-width: 480px) {
-    header { padding-inline: 0px; position: relative; }
+    header {
+        padding-inline: 0px;
+        position: relative;
+    }
+
     header .logo {
         display: flex;
         align-items: center;
@@ -350,7 +309,11 @@ footer .mainUl ul a:hover {
         transform: scale(1);
         gap: 5px;
     }
-    header .logo img { transform: scale(1.25); }
+
+    header .logo img {
+        transform: scale(1.25);
+    }
+
     header .bottomHeader {
         padding: 0;
         padding-bottom: 15px;
@@ -358,12 +321,17 @@ footer .mainUl ul a:hover {
         align-items: center;
         justify-content: space-evenly;
     }
-    header .bottomHeader .share { justify-content: space-between; }
+
+    header .bottomHeader .share {
+        justify-content: space-between;
+    }
+
     header .mainUl {
         position: absolute;
         width: 100vw;
         bottom: 20px;
     }
+
     header .mainUl ul {
         width: 100vw;
         display: flex;
@@ -372,83 +340,134 @@ footer .mainUl ul a:hover {
         font-size: 0.6rem;
         gap: 2px;
     }
+
+    a {
+        color: white;
+    }
+
+    .touch {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: #000;
+        background-color: #fff;
+        border: 3px solid #000;
+        box-shadow: 6px 6px 0px #000;
+        transition: all 0.2s ease;
+        cursor: pointer;
+        margin-top: -13.5px;
+    }
+
+    .touch:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 0px 0px 0px #000;
+        background-color: #000;
+        color: #fff;
+    }
+
+    .touch span {
+        display: inline-block;
+        transition: transform 0.2s ease;
+    }
+
+    .touch:hover span {
+        transform: scale(1.1);
+    }
+
     footer {
-        width: 100vw; 
-        display: flex;
+        overflow: hidden;
     }
-    footer .upperFoot { display: flex; }
-    footer .letUs ,footer .mainFoot , .map { width: 80vw; }
-    footer .upperFoot .letUs { gap: 10px; }
-    footer .upperFoot .mainFoot {
-        width: 100vw;
-        gap: 10px;
+
+    footer .map {
+        scale: 2.5;
     }
-    footer .upperFoot .mainFoot .phone { letter-spacing: 1.5px; }
-    footer .upperFoot .mainFoot .logo { padding-block: 10px; width: 100vw; }
-    footer .map img { transform: scale(1.25); }
-    footer .bottomFooter { padding-block: 10px; }
-    footer .bottomFooter .mainUl ul {
-        display: flex;
-        font-size: 1rem;
-        gap: 5px;
-        padding-block-start: 10px;
+
+    .footText .footSpan {
+        top: 30px;
     }
-    a { color: white; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @keyframes headDown {
-    0% { transform: translateY(-100%); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
+
 header {
     transform: translateY(-100%);
     animation: headDown 0.35s ease-out forwards;
 }
 
 @keyframes logoPop {
-    0% { transform: translateY(-20px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
+
 header .logo {
     opacity: 0;
     animation: logoPop 0.4s ease-out 0.25s forwards;
 }
 
 @keyframes navFadeUp {
-    0% { transform: translateY(20px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
+
 header .mainUl ul a {
     opacity: 0;
     animation: navFadeUp 0.45s ease-out 0.35s forwards;
 }
 
 @keyframes touchUp {
-    0% { transform: translateY(25px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+    0% {
+        transform: translateY(25px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
+
 header .touch {
     opacity: 0;
     animation: touchUp 0.45s ease-out 0.45s forwards;
 }
 
 @keyframes footUp {
-    0% { transform: translateY(100%); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
+
 footer {
     transform: translateY(100%);
     animation: footUp 0.4s ease-out forwards;

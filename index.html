@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <link rel="shortcut icon" href="./assets/JR-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="header-footer.css">
+    <link rel="stylesheet" href="hero-text.css">
     <link rel="stylesheet" href="style.css">
     <title>Jewar | Resort</title>
 </head>
+
 <body>
     <div class="mainHEADER">
         <h2>Jewar | Resort</h1>
-        <img src="./assets/JR-logo.png" alt="">
+            <img src="./assets/JR-logo.png" alt="">
     </div>
     <header>
         <div class="logo">
@@ -20,40 +39,81 @@
         </div>
         <div class="bottomHeader">
             <div class="share">
-                <div class="insta"><a href="https://www.instagram.com/jewarresort"><img src="./assets/Instagram.png" alt="Instagram"></a></div>
+                <div class="insta"><a href="https://www.instagram.com/jewarresort" target="_blank"
+                        rel="noopener noreferrer"><img src="./assets/Instagram.png" alt="Instagram"></a></div>
                 <div class="fb">
-                    <a id="fb-link-header" href=""><img src="./assets/Facebook.png" alt="Facebook"></a>
-                    <div id="fb-popup-header" class="popup">We are not on Facebook yet!</div>    
+                    <a id="fb-link-header" href="#" onclick="alert('We are not on Facebook yet'); return false;"><img
+                            src="./assets/Facebook.png" alt="Facebook"></a>
                 </div>
             </div>
             <div class="mainUl">
                 <ul>
-                    <a href="./index.html"><li>Home</li></a>
-                    <a href="./story.html"><li>Our Story</li></a>
-                    <a href="./planEvents.html"><li>Host your Events</li></a>
-                    <a href="./events.html"><li>Previous Events</li></a>
-                    <a href="./gallery.html"><li>Gallery</li></a>
+                    <a href="./index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="./story.html">
+                        <li>Our Story</li>
+                    </a>
+                    <a href="./planEvents.html">
+                        <li>Host your Events</li>
+                    </a>
+                    <a href="./events.html">
+                        <li>Previous Events</li>
+                    </a>
+                    <a href="./gallery.html">
+                        <li>Gallery</li>
+                    </a>
                 </ul>
             </div>
-            <div class="touch"><h3>Get in Touch</h3></div>
+            <div class="touch">
+                <a href="./contact.html">
+                    <h3>Get in Touch</h3>
+                </a>
+            </div>
         </div>
-  
+
     </header>
 
     <section class="home">
         <div class="intro-imgHolder">
             <img src="./assets/jewarWide (1).avif" alt="">
         </div>
+        <script>
+            window.addEventListener('scroll', function () {
+                const container = document.querySelector('.intro-imgHolder');
+                const img = container.querySelector('img');
+
+                // Get the position of the container relative to the viewport
+                const containerRect = container.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+
+                // Only animate if the image is actually visible on screen
+                if (containerRect.top < windowHeight && containerRect.bottom > 0) {
+                    // Calculate a scroll percentage (0 to 1)
+                    const scrollPercent = (windowHeight - containerRect.top) / (windowHeight + containerRect.height);
+
+                    // Move the image vertically. Adjust '50' to change intensity
+                    const moveAmount = (scrollPercent * 50) - 25;
+
+                    img.style.transform = `translateY(${moveAmount}%)`;
+                }
+            });
+        </script>
         <div class="intro-text">
             <h1>The <span>JEWAR</span> OF <span>POSSIBILITIES</span></h1>
             <br>
-            <p>Jewar du Feÿ is a modern utopia in the heart of France’s Burgundy region. In this inspiring space, we connect art, nature, and community. Whether you want to host your dream event or join our creative community, your boldest ideas are welcome at Château du Feÿ.</p>
+            <p>Jewar Resort is a refined destination where celebration meets elegance. Surrounded by open landscapes and
+                designed for unforgettable gatherings, we bring together luxury, comfort, and exceptional hospitality.
+            </p>
         </div>
         <div class="bottom-img"></div>
         <div class="hosted">
             <div class="hosted-text">
                 <h1>Host Your Event</h1>
-                <p>Inside and outside, Château du Feÿ is a fairytale setting. Nestled into its own private forest, the 400-year-old Château enjoys a protected status as a historical gem. Whether you’re planning an intimate wedding, a dream team retreat, a productive conference or an exuberant art festival, we have a flexible range of spaces to suit groups of up to 500 people. Our dedicated team of events experts are on hand to transform our spaces to make the moods and moments of your dream event a reality.</p>
+                <p>From grand garden galas to intimate indoor gatherings, Jewar Resort offers a breathtaking backdrop
+                    for life’s most meaningful milestones.</p>
+                <p>against a backdrop of curated landscapes and modern elegance, our venue is designed to be a sanctuary
+                    for your vision.</p>
             </div>
             <div class="hosted-examples">
                 <div class="hostedEx">
@@ -70,9 +130,66 @@
                 </div>
             </div>
         </div>
+
+        <section class="hero">
+            <div id="custom-cursor"></div>
+            <div class="gradient-bg" id="bg"></div>
+
+            <div class="sub-text" id="sub">A World of Elegance</div>
+
+            <div class="text-line">
+                <h1 class="reveal">UNFORGETTABLE</h1>
+            </div>
+            <div class="text-line">
+                <h1 class="reveal outline">MEMORIES</h1>
+            </div>
+        </section>
+
+        <section class="horizontal-scroll-container">
+            <div class="sticky-wrapper">
+                <div class="horizontal-content">
+                    <div class="horizontal-item">
+                        <img src="./assets/jewarWide (1).avif" alt="Lush Gardens">
+                        <div class="item-info">
+                            <span>01</span>
+                            <h2>The Lush Gardens</h2>
+                            <p>Experience tranquility in our perfectly manicured outdoor spaces.</p>
+                        </div>
+                    </div>
+                    <div class="horizontal-item">
+                        <img src="./assets/jewarWide (2).avif" alt="Lush Gardens">
+                        <div class="item-info">
+                            <span>01</span>
+                            <h2>The Lush Gardens</h2>
+                            <p>Experience tranquility in our perfectly manicured outdoor spaces.</p>
+                        </div>
+                    </div>
+                    <div class="horizontal-item">
+                        <img src="./assets/jewarInside (1).avif" alt="Grand Hall">
+                        <div class="item-info">
+                            <span>02</span>
+                            <h2>The Grand Hall</h2>
+                            <p>Sophisticated architecture for your most prestigious events.</p>
+                        </div>
+                    </div>
+                    <div class="horizontal-item">
+                        <img src="./assets/jewarInside (2).avif" alt="Luxury Suites">
+                        <div class="item-info">
+                            <span>03</span>
+                            <h2>Luxury Suites</h2>
+                            <p>Refined comfort designed for a restful stay after the celebration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <div class="experties">
             <h1>Our Experties</h1>
-            <p>Our hall offers a selection of premium amenities designed to elevate every event. From a beautifully crafted luxury fountain installation to customizable inner and outer staging, each feature is curated to create a refined and memorable atmosphere. We also provide professional catering services, delivering exceptional cuisine and seamless service for gatherings of all sizes.</p>
+            <p>Our hall offers a selection of premium amenities designed to elevate every event. From a beautifully
+                crafted luxury fountain installation to customizable inner and outer staging, each feature is curated to
+                create a refined and memorable atmosphere. We also provide professional catering services, delivering
+                exceptional cuisine and seamless service for gatherings of all sizes.</p>
             <div class="experties-show">
                 <div class="show">
                     <img src="./assets/jewarInside (1).avif" alt="">
@@ -118,52 +235,94 @@
                 </div>
             </div>
         </div>
-        <div class="bottom-img">
-        </div>
+
+        <section class="info-section">
+            <div class="info-container">
+                <div class="info-why">
+                    <h2 class="reveal">Why Us?</h2>
+                    <div class="why-item">
+                        <h3>Unmatched Ambiance</h3>
+                        <p>A perfect blend of luxury and nature for your special day.</p>
+                    </div>
+                    <div class="why-item">
+                        <h3>Seamless Service</h3>
+                        <p>From planning to execution, we handle the details.</p>
+                    </div>
+                    <div class="why-item">
+                        <h3>Tailored Moments</h3>
+                        <p>Every event is unique; we make sure it feels that way.</p>
+                    </div>
+                </div>
+
+                <div class="info-details">
+                    <div class="detail-box">
+                        <span>Location</span>
+                        <p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Jewar+Patna+Bihar+801503"
+                                target="_blank" rel="noopener noreferrer" class="contact-link">
+                                Jewar, Vivek Vihar Cokony, Patna, Bihar 801503
+                            </a>
+                        </p>
+                    </div>
+                    <div class="detail-box">
+                        <span>Call Us</span>
+                        <p>
+                            <a href="tel:+919801848195" class="contact-link">+91 98018 48195</a>
+                        </p>
+                    </div>
+                    <div class="detail-box">
+                        <span>Email</span>
+                        <p>
+                            <a href="mailto:jewarevents@gmail.com?subject=Private%20Event%20Inquiry%20%7C%20Jewar%20Resort&body=Dear%20Events%20Team%2C%0A%0AI%20am%20interested%20in%20hosting%20a%20private%20event%20at%20Jewar%20Resort.%20Please%20find%20the%20preliminary%20details%20below%3A%0A%0A-%20Event%20Type%3A%0A-%20Preferred%20Date%3A%0A-%20Estimated%20Guest%20Count%3A%0A-%20Contact%20Number%3A%0A%0AI%20look%20forward%20to%20discussing%20the%20possibilities.%0A%0ABest%20regards%2C"
+                                class="contact-link">
+                                jewarevents@gmail.com
+                            </a>
+                        </p>
+                    </div>
+                    <div class="info-action">
+                        <a href="./contact.html" class="touch"><span>Start Planning</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            const infoObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform = "translateY(0)";
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            // Apply to the boxes
+            document.querySelectorAll('.why-item, .detail-box').forEach(el => {
+                el.style.opacity = "0";
+                el.style.transform = "translateY(30px)";
+                el.style.transition = "all 0.6s ease-out";
+                infoObserver.observe(el);
+            });
+        </script>
+
+        <div class="bottom-img"></div>
     </section>
 
     <footer>
-        <div class="upperFoot">
-            <div class="letUs">
-                <p>Subscribe to our mailing list to receive updates</p>
-                <input type="email" placeholder="Your Email">
-                <button>Let US</button>
-                <h4>reach you</h4>
-                <h3>We respect your Privacy.</h3>
-            </div>
-            <div class="mainFoot">
-                <div class="logo">Jewar | Resort</div>
-                <div class="share">
-                    <div class="insta"><a href="https://www.instagram.com/jewar__resort"><img src="./assets/Instagram.png" alt="Instagram"></a></div>
-                    <div class="fb">
-                        <a id="fb-link-footer" href=""><img src="./assets/Facebook.png" alt="Facebook"></a>
-                        <div id="fb-popup-footer" class="popup">We are not on Facebook yet!</div>    
-                    </div>
-                </div>
-                <div class="mail">
-                    <a href="mailto:jewarevents@gmail.com?subject=Event Inquiry&body=Hi, we would like to host an event at your place. Please contact us at +91 ">Mail 2 JEWAR</a>
-                </div>
-                <div class="phone">
-                    <a href="tel:+919801848195">+91 98018 48195</a>
-                </div>
-            </div>
-            <div class="map">
-                <a href="https://maps.app.goo.gl/FWE25Ea2KKt2jnFUA" target="_blank" rel="noopener noreferrer"><img src="./assets/jewarMap.png" alt="Location Map"></a>
-            </div>
+        <div class="map" id="mapContainer">
+            <a href="https://maps.app.goo.gl/FWE25Ea2KKt2jnFUA" target="_blank" rel="noopener noreferrer"><img
+                    src="./assets/jewarMap.png" alt="Location Map"></a>
         </div>
-        <div class="bottomFooter">
-            <div class="mainUl">
-                <ul>
-                    <a href="./index.html"><li>Home</li></a>
-                    <a href="./story.html"><li>Our Story</li></a>
-                    <a href="./planEvents.html"><li>Host your Events</li></a>
-                    <a href="./events.html"><li>Previous Events</li></a>
-                    <a href="./gallery.html"><li>Gallery</li></a>
-                </ul>
-            </div>
+        <button id="toggleMap" class="mapButton">
+            <img src="./assets/arrow_down.png" alt="">
+        </button>
+        <div class="footText">
+            <div class="footSpan">since 2024</div>
+            <div class="footJewar">Jewar</div>
         </div>
     </footer>
 
-    <script src="./popUp.js"></script>
+    <script src="./mapToggle.js"></script>
+    <script src="./hero-text.js"></script>
 </body>
+
 </html>
