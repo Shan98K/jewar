@@ -242,6 +242,13 @@ section p {
     color: #0b1b23;
 }
 
+.info-section a {
+    color: inherit;
+}
+.info-action a {
+    color: black;
+}
+
 .info-container {
     max-width: 1200px;
     margin: 0 auto;

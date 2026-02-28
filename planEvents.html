@@ -3,6 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <link rel="shortcut icon" href="./assets/JR-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="header-footer.css">
     <link rel="stylesheet" href="planEvents.css">
@@ -16,23 +32,39 @@
         </div>
         <div class="bottomHeader">
             <div class="share">
-                <div class="insta"><a href="https://www.instagram.com/jewar__resort"><img src="./assets/Instagram.png" alt="Instagram"></a></div>
+                <div class="insta"><a href="https://www.instagram.com/jewarresort" target="_blank"
+                        rel="noopener noreferrer"><img src="./assets/Instagram.png" alt="Instagram"></a></div>
                 <div class="fb">
-                    <a id="fb-link-header" href=""><img src="./assets/Facebook.png" alt="Facebook"></a>
-                    <div id="fb-popup-header" class="popup">We are not on Facebook yet!</div>    
+                    <a id="fb-link-header" href="#" onclick="alert('We are not on Facebook yet'); return false;"><img
+                            src="./assets/Facebook.png" alt="Facebook"></a>
                 </div>
             </div>
             <div class="mainUl">
                 <ul>
-                    <a href="./index.html"><li>Home</li></a>
-                    <a href="./story.html"><li>Our Story</li></a>
-                    <a href="./planEvents.html"><li>Host your Events</li></a>
-                    <a href="./events.html"><li>Previous Events</li></a>
-                    <a href="./gallery.html"><li>Gallery</li></a>
+                    <a href="./index.html">
+                        <li>Home</li>
+                    </a>
+                    <a href="./story.html">
+                        <li>Our Story</li>
+                    </a>
+                    <a href="./planEvents.html">
+                        <li>Host your Events</li>
+                    </a>
+                    <a href="./events.html">
+                        <li>Previous Events</li>
+                    </a>
+                    <a href="./gallery.html">
+                        <li>Gallery</li>
+                    </a>
                 </ul>
             </div>
-            <div class="touch"><h3>Get in Touch</h3></div>
+            <div class="touch">
+                <a href="./contact.html">
+                    <h3>Get in Touch</h3>
+                </a>
+            </div>
         </div>
+
     </header>
 
 
@@ -92,52 +124,24 @@
                 <img src="./gallery/jewar (18).jpg" alt="">
             </div>
         </div>
-        <div class="getTouch"><a href="#"><h3>GET IN TOUCH</h3></a></div>
+        <div class="getTouch"><a href="./contact.html"><h3>GET IN TOUCH</h3></a></div>
     </section>
     
 
     <footer>
-        <div class="upperFoot">
-            <div class="letUs">
-                <p>Subscribe to our mailing list to receive updates</p>
-                <input type="email" placeholder="Your Email">
-                <button>Let US</button>
-                <h4>reach you</h4>
-                <h3>We respect your Privacy.</h3>
-            </div>
-            <div class="mainFoot">
-                <div class="logo">Jewar | Resort</div>
-                <div class="share">
-                    <div class="insta"><a href="https://www.instagram.com/jewar__resort"><img src="./assets/Instagram.png" alt="Instagram"></a></div>
-                    <div class="fb">
-                        <a id="fb-link-footer" href=""><img src="./assets/Facebook.png" alt="Facebook"></a>
-                        <div id="fb-popup-footer" class="popup">We are not on Facebook yet!</div>    
-                    </div>
-                </div>
-                <div class="mail">
-                    <a href="#">info@jewar.com</a>
-                </div>
-                <div class="phone">
-                    <a href="#">+91 XXXXX XXXXX</a>
-                </div>
-            </div>
-            <div class="map">
-                <a href="https://maps.app.goo.gl/FWE25Ea2KKt2jnFUA" target="_blank" rel="noopener noreferrer"><img src="./assets/jewarMap.png" alt="Location Map"></a>
-            </div>
+        <div class="map" id="mapContainer">
+            <a href="https://maps.app.goo.gl/FWE25Ea2KKt2jnFUA" target="_blank" rel="noopener noreferrer"><img
+                    src="./assets/jewarMap.png" alt="Location Map"></a>
         </div>
-        <div class="bottomFooter">
-            <div class="mainUl">
-                <ul>
-                    <a href="./index.html"><li>Home</li></a>
-                    <a href="./story.html"><li>Our Story</li></a>
-                    <a href="./planEvents.html"><li>Host your Events</li></a>
-                    <a href="./events.html"><li>Previous Events</li></a>
-                    <a href="./gallery.html"><li>Gallery</li></a>
-                </ul>
-            </div>
+        <button id="toggleMap" class="mapButton">
+            <img src="./assets/arrow_down.png" alt="">
+        </button>
+        <div class="footText">
+            <div class="footSpan">since 2024</div>
+            <div class="footJewar">Jewar</div>
         </div>
     </footer>
 
-    <script src="./popUp.js"></script>
+    <script src="./mapToggle.js"></script>
 </body>
 </html>

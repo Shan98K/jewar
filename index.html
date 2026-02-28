@@ -32,6 +32,7 @@
         <h2>Jewar | Resort</h1>
             <img src="./assets/JR-logo.png" alt="">
     </div>
+
     <header>
         <div class="logo">
             <img src="./assets/JR-logo.png" alt="">
@@ -78,27 +79,6 @@
         <div class="intro-imgHolder">
             <img src="./assets/jewarWide (1).avif" alt="">
         </div>
-        <script>
-            window.addEventListener('scroll', function () {
-                const container = document.querySelector('.intro-imgHolder');
-                const img = container.querySelector('img');
-
-                // Get the position of the container relative to the viewport
-                const containerRect = container.getBoundingClientRect();
-                const windowHeight = window.innerHeight;
-
-                // Only animate if the image is actually visible on screen
-                if (containerRect.top < windowHeight && containerRect.bottom > 0) {
-                    // Calculate a scroll percentage (0 to 1)
-                    const scrollPercent = (windowHeight - containerRect.top) / (windowHeight + containerRect.height);
-
-                    // Move the image vertically. Adjust '50' to change intensity
-                    const moveAmount = (scrollPercent * 50) - 25;
-
-                    img.style.transform = `translateY(${moveAmount}%)`;
-                }
-            });
-        </script>
         <div class="intro-text">
             <h1>The <span>JEWAR</span> OF <span>POSSIBILITIES</span></h1>
             <br>
